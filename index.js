@@ -8,11 +8,12 @@
  */
 function trimProperties(obj) {
 
+  const result = {}
   for (let prop in obj) {
-    obj[prop] = obj[prop].trim()
+    result[prop] = obj[prop].trim()
   }
 
-  return obj
+  return result
   
 }
 
