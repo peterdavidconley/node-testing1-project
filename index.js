@@ -115,7 +115,7 @@ class Seasons {
   next() {
     const nextSeason = this.seasons[this.currentSeason]
     if (this.currentSeason === 3) {
-      this.currentSeason = 4
+      this.currentSeason = 0
     } else {
       ++this.currentSeason
     }
