@@ -11,6 +11,7 @@ describe('[Exercise 1] trimProperties', () => {
 
     const input = { foo: 'foo   ', bar: '   bar', poo: '  poo  '}
     utils.trimProperties(input)
+    expect(input).toEqual({ foo: 'foo', bar: 'bar', poo: 'poo'})
 
   })
 })
