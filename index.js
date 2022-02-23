@@ -137,6 +137,7 @@ class Car {
     this.odometer = 0 // car initilizes with zero miles
     this.tank = tankSize // car initiazes full of gas
     this.tankSize = tankSize
+    this.mpg = mpg
 
   }
 
@@ -155,9 +156,19 @@ class Car {
    */
   drive(distance) {
     
-    this.odometer = this.odometer + distance
-    return this.odometer;
+    const possibleMiles = this.tank * this.mpg
 
+    if (distance <= possibleMiles) {
+
+    this.odometer = this.odometer + distance
+    this.tank = this.tank - (distance/this.mpg)
+    return this.odometer
+
+    } else {
+      this.odometer = this.odometer + possibleMiles
+      this.tank = 0
+      return this.odometer
+    }
   }
 
   /**

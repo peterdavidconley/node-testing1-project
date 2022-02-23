@@ -131,7 +131,10 @@ describe('[Exercise 6] Car', () => {
     expect(focus.drive(100)).toBe(200)
   })
   test('[16] driving the car uses gas', () => {
-    expect(4+4).toEqual(10);
+
+    focus.drive(5000)
+    expect(focus.tank).toBe(0)
+
   })
   test('[17] refueling allows to keep driving', () => {
     expect(4+4).toEqual(10);
