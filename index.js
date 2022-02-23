@@ -155,7 +155,8 @@ class Car {
    */
   drive(distance) {
     
-
+    this.odometer = this.odometer + distance
+    return this.odometer;
 
   }
 

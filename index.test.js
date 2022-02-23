@@ -127,7 +127,8 @@ describe('[Exercise 6] Car', () => {
     focus = new utils.Car('focus', 20, 30) // each test must start with a fresh car
   })
   test('[15] driving the car returns the updated odometer', () => {
-    expect(4+4).toEqual(10);
+    expect(focus.drive(100)).toBe(100)
+    expect(focus.drive(100)).toBe(200)
   })
   test('[16] driving the car uses gas', () => {
     expect(4+4).toEqual(10);
